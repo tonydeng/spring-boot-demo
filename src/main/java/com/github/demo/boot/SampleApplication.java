@@ -1,6 +1,6 @@
-package com.duoqu.demo.boot;
+package com.github.demo.boot;
 
-import com.duoqu.demo.boot.service.HelloService;
+import com.github.demo.boot.service.HelloService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;

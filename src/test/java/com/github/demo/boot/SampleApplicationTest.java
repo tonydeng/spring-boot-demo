@@ -1,5 +1,6 @@
-package com.duoqu.demo.boot;
+package com.github.demo.boot;
 
+import com.duoqu.demo.boot.SampleApplication;
 import org.junit.Rule;
 import org.junit.Test;
 import org.springframework.boot.test.OutputCapture;
