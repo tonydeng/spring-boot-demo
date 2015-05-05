@@ -1,4 +1,4 @@
-package com.duoqu.demo.boot;
+package com.github.demo.boot;
 
 import org.junit.Rule;
 import org.junit.Test;
