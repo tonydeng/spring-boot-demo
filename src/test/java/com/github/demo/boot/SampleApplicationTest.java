@@ -1,6 +1,6 @@
 package com.github.demo.boot;
 
-import com.duoqu.demo.boot.SampleApplication;
+import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.slf4j.Logger;
@@ -14,10 +14,22 @@ public class SampleApplicationTest {
     private static final Logger log = LoggerFactory.getLogger(SampleApplicationTest.class);
     @Rule
     public OutputCapture outputCapture = new OutputCapture();
-    @Test
+    private String profiles;
+
+    @Before
+    public void init(){
+        profiles = System.getProperty("spring.profiles.active");
+    }
+//    @Test
     public void testCommandLineOverrides(){
         SampleApplication.main(new String[]{"--name=Tony"});
         String output=  outputCapture.toString();
         log.info("--------------SampleApplication test commandline output:'{}'", output);
+    }
+    @Test
+    public void testDefaultSettings(){
+        SampleApplication.main(new String[0]);
+        String output = outputCapture.toString();
+        log.info("--------------SampleApplication test default setting output:'{}'", output);
     }
 }
