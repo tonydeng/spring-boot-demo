@@ -14,12 +14,7 @@ public class SampleApplicationTest {
     private static final Logger log = LoggerFactory.getLogger(SampleApplicationTest.class);
     @Rule
     public OutputCapture outputCapture = new OutputCapture();
-    private String profiles;
 
-    @Before
-    public void init(){
-        profiles = System.getProperty("spring.profiles.active");
-    }
 //    @Test
     public void testCommandLineOverrides(){
         SampleApplication.main(new String[]{"--name=Tony"});
